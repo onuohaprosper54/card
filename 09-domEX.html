@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-9b">9b</button>
+  <button id="heads">heads</button>
+  <button id="tails">tails</button>
+  <p id="choice">choice</p>
+
+  <input id="name" placeholder="prosper" onkeydown="
+  console.log('event.key');
+   if (event.key === 'Enter') {
+ 
+    }
+  ">
+  <button id="submit-btn">submit</button>
+  <p id="resuit">resuit</p>
+
+<input id="text" onkeyup="
+console.log('event.key');
+if (event.key === 'Enter') {
+ 
+    }
+">
+
+ 
+
+  <script>
+    console.log(document.querySelector('button'));
+    
+   document.querySelector('.js-9b').innerHTML = 
+  ('change');
+
+  document.getElementById('heads').addEventListener('click',() => 
+{ document.getElementById('choice').innerText = 'you chose: heads'
+});
+
+document.getElementById('tails').addEventListener('click',() => 
+{ document.getElementById('choice').innerText = 'you chose: tails'
+});
+
+document.getElementById('submit-btn').addEventListener('click',() =>
+{ const name = document.getElementById('name').value
+  document.getElementById('resuit').innerText = `your name is: ${name}`
+});
+
+
+document.getElementById('text').addEventListener.value
+;
+
+function displayName() {
+  
+}
+  </script>
+</body>
+</html>

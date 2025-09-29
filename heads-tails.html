@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>heads</title>
+</head>
+<body>
+   
+  <button id="heads">Heads</button>
+  <button id="tails">Tails</button>
+  
+  <Script>
+    function playGame(guess) {
+      const flip = Math.random() > 0.5? 'heads':'tails';
+      const result = guess === flip ? '   You win' : ' You lose'
+      console.log(`you guessed ${guess},flip was ${flip},${result}`);
+ }
+ document.getElementById('heads').addEventListener('click', () => playGame('heads'));
+document.getElementById('tails').addEventListener('click', () => playGame('tails'));
+
+function playGame(guess) {
+    const flip = Math.random() < 0.5 ? 'heads' : 'tails';
+    if (guess === flip) {
+        score.wins++;
+        console.log(`You guessed ${guess}, flip was ${flip}. You win!`);
+    } else {
+        score.losses++;
+        console.log(`You guessed ${guess}, flip was ${flip}. You lose!`);
+    }
+    console.log(`Score - Wins: ${score.wins}, Losses: ${score.losses}`);
+}
+document.getElementById('heads').addEventListener('click', () => playGame('heads'));
+document.getElementById('tails').addEventListener('click', () => playGame('tails'));
+
+let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
+
+function playGame(guess) {
+    const flip = Math.random() < 0.5 ? 'heads' : 'tails';
+    if (guess === flip) {
+        score.wins++;
+        console.log(`You guessed ${guess}, flip was ${flip}. You win!`);
+    } else {
+        score.losses++;
+        console.log(`You guessed ${guess}, flip was ${flip}. You lose!`);
+    }
+    console.log(`Score - Wins: ${score.wins}, Losses: ${score.losses}`);
+    localStorage.setItem('score', JSON.stringify(score));
+}
+document.getElementById('heads').addEventListener('click', () => playGame('heads'));
+document.getElementById('tails').addEventListener('click', () => playGame('tails'))
+
+</script>

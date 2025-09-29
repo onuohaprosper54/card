@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objectEX</title>
+</head>
+<body>
+  <Script>
+    const product = {
+      name: 'basketball',
+      price: 2095,
+      ['delivery-time']: '3 day',
+    };
+   product.price += 500;
+   
+function comparaPrice(product1,product2) {
+  if (product1.price < product2.price) {
+    return product1;
+  } else if (product2.price < product1.price) {
+    return product2;
+} else {
+    return 'both products have the same price';
+}
+}
+
+let football = {
+  name: 'football',
+  price: 1500,
+}
+
+
+console.log(product);
+console.log(product.price);
+console.log(product['delivery-time']);
+console.log(football);
+
+  </Script>
+</body>
+</html>

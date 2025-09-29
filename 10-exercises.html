@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.Add-btn{
+color: black;
+background-color: rgb(255, 216, 20);
+border-radius: 40px;
+height: 40px;
+width: 150px;
+}
+.Request-now{
+height: 40px;
+color: white;
+background-color: black;
+border-radius: 5px;
+width: 150px;
+font-size: 15px;
+font-family: Arial;
+font: bold;
+}
+.Schedule-btn{
+height: 40px;
+color: black;
+background-color: rgb(230, 230, 230);
+border-radius: 5px;
+width: 150px;  
+font-size: 15px;
+font-family: Arial;
+font: bold;
+}
+.toggled-btn.is-toggled{
+  background-color: rgb(214, 228, 214);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+}
+.is-toggled{
+  background-color: gray;
+  color: white;
+}
+
+</style>
+<body>
+  
+  <button class="Add-btn">Add to cart</button>
+  <p class="uber-btn"><button class="Request-now">Request now</button>
+    <button class="Schedule-btn">Schedule for later</button>
+  </p>
+   <button class="js-button">Test</button>
+   <button class="is-toggled toggled-btn">Gaming</button>
+</body>
+<script>
+
+console.log(document.querySelector('.js-button').classList.contains('js-button'));
+
+
+document.querySelector('.toggled-btn').classList.contains('is-toggled');
+  
+/* const toggleButton = document.querySelector('.toggled-btn');
+toggleButton.addEventListener('click',() => {
+  if (toggleButton.classList.contains('is-toggled')) {
+    toggleButton.classList.remove('is-toggled');
+    toggleButton.textContent = 'OFF';
+  } else{toggleButton.classList.add('is-toggled');
+  toggleButton.textContent = 'ON';
+
+  }
+}*/
+</script>
+</html>

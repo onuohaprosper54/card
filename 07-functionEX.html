@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functionsEX</title>
+</head>
+<body>
+  
+  <script>
+    function convertToFahrenheit(celsius) {
+      Fahrenheit = (celsius * 9 / 5) + 32;
+      console.log(Fahrenheit);
+    }
+
+    function convertToCelsius(Fahrenheit) {
+  Celsius = (Fahrenheit - 32 ) * 5/9;
+  console.log(Celsius);
+}
+
+function convertTemperature(degree, unit) {
+if (unit === 'C') {
+  let Fahrenheit = convertToFahrenheit(degree);
+  return `${Fahrenheit}F`;
+} else if (unit === 'F') {
+  let Celsius = convertToCelsius(degree);
+return `${Celsius}C`;
+} else { 
+  return 'Invaild unit';
+}
+}
+
+function convertLength(length, fromUnit, toUnit) {
+  const conversions = { 
+    kmToMiles: 1 / 1.6,
+    milesToKm: 1.6,
+};
+  if (fromUnit === toUnit) 
+  return `${length} ${fromUnit}`;  
+}
+let convertedLength;
+if (fromUnit === 'km' && toUnit === 'miles') {
+  convertedLength = length * conversions.kmToMiles;
+} else {convertedLength = length * conversions.milesToKm; 
+    }
+    return `${convertedLength.toFixed(2)} ${toUnit}`;
+    }
+    
+    
+ 
+console.log(convertLength(50, 'miles', 'km'));
+console.log(convertLength(32, 'km', 'miles'));
+ console.log(convertLength(50, 'km', 'km'));
+
+convertToFahrenheit(25);
+convertToCelsius(86);      
+convertTemperature(25, 'C');
+convertTemperature(86, 'F');
+  </script>
+</body>
+</html>
